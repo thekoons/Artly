@@ -1,0 +1,72 @@
+body{
+	margin: 0px;
+}
+
+header {
+	width: 100%;
+	height: 8%;
+
+	background-color: rgb(82, 103, 108);
+
+	font-family: 'Ubuntu', sans-serif;
+	letter-spacing: 2px;
+	text-align: center;
+}
+
+header h1{
+	padding-top: 8px;
+	text-decoration: none;
+	color: #FFF;
+}
+
+header a{
+	color: inherit;
+	text-decoration: none;
+}
+
+header a:hover{
+	color: #dddddd;
+}
+
+aside {
+	float: left;
+	width: 20%;
+	height: 92%;
+	background-color: #9accc6;
+	font-family: 'Nunito', sans-serif;
+	overflow-y: scroll;
+	overflow-x: hidden;
+}
+
+content {
+
+	float: right;
+	width: 75%;
+
+	padding: 2%;
+	height: 80%;
+	font-family: 'Nunito', sans-serif;
+
+	overflow-y: scroll
+}
+
+
+/* width */
+::-webkit-scrollbar {
+width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+background: #555;
+}

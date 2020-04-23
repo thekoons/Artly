@@ -1,0 +1,52 @@
+<html>
+
+    <head>
+
+        <link href="style_page.css" rel="stylesheet" type="text/css"/>
+        <title> Artly Prototype </title>
+
+    </head>
+
+    <body>
+
+        <header>
+            <h1>Artly</h1> 
+        </header>
+
+        <aside>
+            <button id="circle" onclick="drawCircle()"></button>
+            <button id="gradient" onclick="drawGradient()"></button>
+        </aside>
+
+        <content>
+            <canvas id="mainImage" width="500" height="500"></canvas>
+        </content>
+
+    </body>
+
+</html>
+
+<script>
+
+function drawCircle(){
+    var c = document.getElementById("mainImage");
+    var ctx = c.getContext("2d");
+
+    ctx.beginPath(0, 0);
+    ctx.arc(95, 50, 40, 0, 2 * Math.PI);
+    ctx.stroke();
+}
+
+function drawGradient(){
+    var c = document.getElementById("mainImage");
+    var ctx = c.getContext("2d");
+
+    var grd = ctx.createLinearGradient(0, 0, 200, 0);
+    grd.addColorStop(0, "red");
+    grd.addColorStop(1, "white");
+
+    ctx.fillStyle = grd;
+    ctx.fillRect(10, 10, 150, 80);
+}
+
+</script>
