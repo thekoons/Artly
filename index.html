@@ -3,6 +3,7 @@
     <head>
 
         <link href="style_page.css" rel="stylesheet" type="text/css"/>
+		<script src="ImageGen.js"></script>
         <title> Artly Prototype </title>
 
     </head>
@@ -14,8 +15,18 @@
         </header>
 
         <aside>
-            <button id="circle" onclick="drawCircle()"></button>
-            <button id="gradient" onclick="drawGradient()"></button>
+            <table>
+                <tr>
+                    <td><button id="clear" onclick="drawClear()"> Clear </button></td>
+                    <td><button id="rgradient" onclick="drawRGradient()"> RGradient </button></td>
+                </tr>
+                <tr>
+                    <td><button id="circle" onclick="drawCircle()"> Circle </button></td>
+                    <td><button id="gradient" onclick="drawGradient()"> Gradient </button></td>
+                </tr>
+            </table>
+            
+            
         </aside>
 
         <content>
@@ -26,27 +37,3 @@
 
 </html>
 
-<script>
-
-function drawCircle(){
-    var c = document.getElementById("mainImage");
-    var ctx = c.getContext("2d");
-
-    ctx.beginPath(0, 0);
-    ctx.arc(95, 50, 40, 0, 2 * Math.PI);
-    ctx.stroke();
-}
-
-function drawGradient(){
-    var c = document.getElementById("mainImage");
-    var ctx = c.getContext("2d");
-
-    var grd = ctx.createLinearGradient(0, 0, 200, 0);
-    grd.addColorStop(0, "red");
-    grd.addColorStop(1, "white");
-
-    ctx.fillStyle = grd;
-    ctx.fillRect(10, 10, 150, 80);
-}
-
-</script>
