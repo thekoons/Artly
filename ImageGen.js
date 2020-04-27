@@ -52,3 +52,32 @@ function drawRGradient(){
 } 
 
 
+function render(type, width, height){
+    var c = document.getElementById("mainImage");
+    var ctx = c.getContext("2d");
+
+    var imgData = ctx.createImageData(width, height);
+
+    switch(type) {
+        case 1:
+            //cellular
+            break;
+        case 2:
+            //rewrite
+            rewrite_prep(imgData, width, height);
+            break;
+        case 3:
+            //painterly
+            break;
+        case 4:
+            //fractal
+            break;
+        case 5:
+            //sorter
+            break;
+        default:
+            //none
+    }
+
+    ctx.putImageData(imgData, 0, 0);
+}
