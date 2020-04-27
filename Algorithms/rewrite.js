@@ -180,31 +180,37 @@ function getColor(n){
             color[0] = 255;
             color[1] = 255;
             color[2] = 255;
+            color[3] = 255;
             break;
         case 2:  //Red
             color[0] = 255;
             color[1] = 0;
             color[2] = 0;
+            color[3] = 255;
             break;
         case 3:  //Blue
             color[0] = 0;
             color[1] = 0;
             color[2] = 255;
+            color[3] = 255;
             break;
         case 4:  //Green
             color[0] = 0;
             color[1] = 255;
             color[2] = 0;
+            color[3] = 255;
             break;
         case 5:  //Purple
             color[0] = 128;
             color[1] = 0;
             color[2] = 128;
+            color[3] = 255;
             break;
         default: //Black
             color[0] = 0;
             color[1] = 0;
             color[2] = 0;
+            color[3] = 255;
             break;
     }
 
